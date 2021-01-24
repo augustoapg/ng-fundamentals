@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
     @media (max-width: 1200px) {
       #searchForm { display: none; }
     }
+    li > a.active { color: #F97924; }
   `]
 })
 
