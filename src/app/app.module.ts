@@ -8,10 +8,10 @@ import { NavBarComponent } from './nav/navbar.component';
 import { EventService } from './events/shared/event.service';
 import { ToastrService } from './common/toastr.service';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
-import { appRoutes } from '../routes';
+import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
 import { CreateEventComponent } from './events/create-event.component';
-import { Error404Component } from 'src/errors/404.component';
+import { Error404Component } from 'src/app/errors/404.component';
 import { EventRouteActivatorService } from './events/event-details/event-route-activator.service';
 import { EventsListResolverService } from './events/events-list-resolver.service';
 
