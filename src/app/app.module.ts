@@ -10,7 +10,8 @@ import {
   EventRouteActivatorService,
   EventsListResolverService,
   CreateSessionComponent,
-  SessionListComponent
+  SessionListComponent,
+  DurationPipe
 } from './events/index'
 
 import { EventsAppComponent } from './events-app.component';
@@ -25,6 +26,7 @@ import { CollapsibleWellComponent } from './common/collapsible-well.component';
 
 @NgModule({
   declarations: [
+    DurationPipe,
     EventsAppComponent,
     EventsListComponent,
     EventThumbnailComponent,
