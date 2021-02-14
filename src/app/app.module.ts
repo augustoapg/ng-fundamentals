@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import {
   EventsListComponent,
   EventThumbnailComponent,
+  UpvoteComponent,
   EventService,
   EventDetailsComponent,
   CreateEventComponent,
@@ -11,7 +12,8 @@ import {
   EventsListResolverService,
   CreateSessionComponent,
   SessionListComponent,
-  DurationPipe
+  DurationPipe,
+  VoterService
 } from './events/index'
 
 import { EventsAppComponent } from './events-app.component';
@@ -37,6 +39,7 @@ let jQuery = window['$'];
   declarations: [
     ModalTriggerDirective,
     DurationPipe,
+    UpvoteComponent,
     EventsAppComponent,
     EventsListComponent,
     EventThumbnailComponent,
@@ -65,7 +68,8 @@ let jQuery = window['$'];
       useValue: checkDirtyState
     },
     EventsListResolverService,
-    AuthService
+    AuthService,
+    VoterService
   ],
   bootstrap: [EventsAppComponent]
 })
