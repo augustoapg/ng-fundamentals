@@ -13,7 +13,8 @@ import {
   CreateSessionComponent,
   SessionListComponent,
   DurationPipe,
-  VoterService
+  VoterService,
+  LocationValidator
 } from './events/index'
 
 import { EventsAppComponent } from './events-app.component';
@@ -37,6 +38,7 @@ let jQuery = window['$'];
 
 @NgModule({
   declarations: [
+    LocationValidator,
     ModalTriggerDirective,
     DurationPipe,
     UpvoteComponent,
