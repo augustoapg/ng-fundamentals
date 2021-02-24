@@ -18,7 +18,7 @@ export class LoginComponent {
   }
 
   login(formValues) {
-    this.authService.loginUser(formValues.userName, formValues.password);
+    this.authService.loginUser(formValues.username, formValues.password);
     this.router.navigate(['events']);
   }
 
