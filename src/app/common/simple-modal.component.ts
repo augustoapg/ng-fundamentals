@@ -31,7 +31,7 @@ export class SimpleModalComponent {
   constructor(@Inject(JQ_TOKEN) private $: any) { }
 
   closeModal() {
-    if (this.closeOnBodyClick.toLocaleLowerCase() === "true") {
+    if (this.closeOnBodyClick.toLocaleLowerCase() === 'true') {
       this.$(this.containerEl.nativeElement).modal('hide');
     }
   }

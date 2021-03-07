@@ -1,7 +1,7 @@
-import { Component } from "@angular/core";
-import { ActivatedRoute, Params } from "@angular/router";
-import { IEvent, ISession } from "../shared";
-import { EventService } from "../shared/event.service";
+import { Component } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { IEvent, ISession } from '../shared';
+import { EventService } from '../shared/event.service';
 
 @Component({
   templateUrl: './event-details.component.html',
@@ -15,16 +15,16 @@ import { EventService } from "../shared/event.service";
 export class EventDetailsComponent {
   event: IEvent;
   addMode: boolean;
-  filterBy: string = 'all';
-  sortBy: string = 'votes';
+  filterBy = 'all';
+  sortBy = 'votes';
 
-  constructor(private eventService:EventService, private route:ActivatedRoute) {
+  constructor(private eventService: EventService, private route: ActivatedRoute) {
 
   }
 
   ngOnInit() {
     this.route.data.forEach((data) => {
-        this.event = data['event'];
+        this.event = data.event;
         this.addMode = false;
     });
   }
@@ -33,13 +33,13 @@ export class EventDetailsComponent {
     this.addMode = true;
   }
 
-  saveNewSession(session:ISession) {
+  saveNewSession(session: ISession) {
     const nextId = Math.max.apply(null, this.event.sessions.map(s => s.id)) + 1;
     session.id = nextId;
     this.event.sessions.push(session);
     this.eventService.saveEvent(this.event).subscribe(() => {
       this.addMode = false;
-    })
+    });
   }
 
   cancelAddSession() {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { EventService } from './shared';
 
@@ -15,9 +15,9 @@ import { EventService } from './shared';
 })
 export class CreateEventComponent {
   newEvent;
-  isDirty:boolean = true;
+  isDirty = true;
 
-  constructor(private router:Router, private eventService:EventService) {}
+  constructor(private router: Router, private eventService: EventService) {}
 
   cancel() {
     this.router.navigate(['/events']);

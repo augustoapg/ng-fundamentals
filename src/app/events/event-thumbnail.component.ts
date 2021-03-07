@@ -29,7 +29,7 @@ import { IEvent } from './shared';
     .well div { color: #bbb; }`]
 })
 export class EventThumbnailComponent {
-  @Input() event:IEvent;
+  @Input() event: IEvent;
 
   getStartTimeClass() {
     if (this.event && this.event.time === '8:00 am') {

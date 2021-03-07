@@ -1,8 +1,8 @@
-import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { Observable, of } from "rxjs";
-import { catchError } from "rxjs/operators";
-import { ISession } from "../shared";
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import { ISession } from '../shared';
 
 @Injectable()
 export class VoterService {
@@ -35,6 +35,6 @@ export class VoterService {
     return (error: any): Observable<T> => {
       console.log(error);
       return of(result as T);
-    }
+    };
   }
 }

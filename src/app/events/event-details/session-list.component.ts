@@ -8,13 +8,13 @@ import { VoterService } from './voter.service';
   templateUrl: './session-list.component.html'
 })
 export class SessionListComponent implements OnChanges {
-  @Input() eventId:number;
-  @Input() sessions:ISession[];
-  @Input() filterBy:string;
-  @Input() sortBy:string;
-  visibleSessions:ISession[];
+  @Input() eventId: number;
+  @Input() sessions: ISession[];
+  @Input() filterBy: string;
+  @Input() sortBy: string;
+  visibleSessions: ISession[];
 
-  constructor(public auth:AuthService, private voterService: VoterService) {}
+  constructor(public auth: AuthService, private voterService: VoterService) {}
 
   ngOnChanges() {
     if (this.sessions) {
@@ -49,8 +49,7 @@ export class SessionListComponent implements OnChanges {
 }
 
 function sortByNameAsc(s1: ISession, s2: ISession) {
-  if(s1.name > s2.name) return 1;
-  else if(s1.name === s2.name) return 0;
+  if (s1.name > s2.name) { return 1; } else if (s1.name === s2.name) { return 0; }
   return -1;
 }
 

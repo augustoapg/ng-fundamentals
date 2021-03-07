@@ -19,13 +19,13 @@ import { EventService } from './shared/event.service';
 })
 
 export class EventsListComponent implements OnInit {
-  events:IEvent[];
+  events: IEvent[];
 
-  constructor (private route:ActivatedRoute) {
+  constructor(private route: ActivatedRoute) {
 
   }
 
   ngOnInit() {
-    this.events = this.route.snapshot.data['events'];
+    this.events = this.route.snapshot.data.events;
   }
 }
