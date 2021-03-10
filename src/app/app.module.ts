@@ -28,11 +28,18 @@ import {
   ModalTriggerDirective
 } from './common/index';
 import { appRoutes } from './routes';
-import { RouterModule } from '@angular/router';
+import { PreloadAllModules, RouterModule } from '@angular/router';
 import { Error404Component } from 'src/app/errors/404.component';
 import { AuthService } from './user/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
+declare global {
+  interface Window {
+      toastr:any;
+      $:any;
+  }
+}
 
 const toastr: Toastr = window.toastr;
 const jQuery = window.$;
@@ -57,7 +64,7 @@ const jQuery = window.$;
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules}),
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
